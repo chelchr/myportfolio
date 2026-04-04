@@ -1,12 +1,6 @@
 @import "tailwindcss";
 
 @theme {
-  --color-brand-bg: #12111d;
-  --color-brand-accent: #4f46e5;
-  --color-brand-text-muted: #94a3b8;
-  --color-brand-teal: #2dd4bf;
-
-  --color-name-start: #ec4899;
   --color-name-middle: #a855f7;
   --color-name-end: #6366f1;
 
@@ -22,4 +16,14 @@ body {
   background-color: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+@layer utilities {
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
 }
