@@ -16,13 +16,7 @@ export default function Navbar() {
           href="/"
           className="flex items-center transition-all hover:scale-110"
         >
-          <Image
-            src="/INITIAL.svg"
-            alt="Logo"
-            width={100}
-            height={100}
-            priority
-          />
+          <Image src="/icon.svg" alt="Logo" width={100} height={100} priority />
         </Link>
         <ul className="flex gap-8 font-medium text-white/90">
           {navLinks.map((link) => (
