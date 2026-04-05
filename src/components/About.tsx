@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
 import Link from "next/link";
-import { motion, AnimatePresence, Variants } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import { MoveLeft, Download } from "lucide-react";
 import { orgsList } from "@/data/orgsList";
 import { worksList } from "@/data/worksList";
@@ -43,32 +43,32 @@ const About = () => {
   return (
     <section
       id="about"
-      className="min-h-screen flex flex-col items-center justify-center py-16 relative overflow-hidden"
+      className="min-h-screen flex flex-col items-center justify-center py-20 relative overflow-hidden"
     >
       <div className="absolute top-[50%] left-[18%] -translate-x-1/2 -translate-y-1/2 w-[250px] h-[250px] bg-lime-300/40 blur-[100px] rounded-full -z-0" />
 
-      <div className="max-w-6xl mx-auto px-12 pt-5 w-full z-10 flex flex-col">
+      <div className="max-w-6xl mx-auto px-6 md:px-12 pt-5 w-full z-10 flex flex-col">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: false, margin: "-100px" }}
-          className="w-full flex justify-end md:pr-10"
+          className="w-full flex justify-center md:justify-end md:pr-10 mb-8"
         >
           <h2 className="text-3xl md:text-4xl font-bold text-fuchsia-300 tracking-tighter">
             About Me
           </h2>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-5 gap-8 items-center">
+        <div className="flex flex-col md:grid md:grid-cols-5 gap-8 items-center">
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.6 }}
-            className="md:col-span-2 flex justify-start -ml-8 md:-ml-12"
+            className="md:col-span-2 flex justify-center md:justify-start"
           >
             <div
-              className="relative w-[320px] h-[420px] md:w-[350px] md:h-[450px]"
+              className="relative w-[280px] h-[380px] md:w-[350px] md:h-[450px]"
               style={{
                 WebkitMaskImage:
                   "linear-gradient(to bottom, black 82%, transparent 100%)",
@@ -84,12 +84,12 @@ const About = () => {
             </div>
           </motion.div>
 
-          <div className="md:col-span-3 flex flex-col gap-7">
+          <div className="md:col-span-3 flex flex-col gap-7 w-full">
             <motion.div
               initial={{ opacity: 0, x: 30 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true, margin: "-100px" }}
-              className="border-2 border-lime-300/30 p-8 rounded-[2.5rem] backdrop-blur-md relative group shadow-xl"
+              className="border-2 border-lime-300/30 p-6 md:p-8 rounded-[2rem] md:rounded-[2.5rem] backdrop-blur-md relative group shadow-xl"
             >
               <div className="min-h-[110px] flex flex-col justify-center gap-4">
                 <AnimatePresence mode="wait">
@@ -101,7 +101,7 @@ const About = () => {
                     transition={{ duration: 0.2 }}
                   >
                     {activeTab === "default" && (
-                      <p className="text-lg md:text-xl leading-relaxed text-white/90 font-light italic">
+                      <p className="text-base md:text-xl leading-relaxed text-white/90 font-light italic">
                         "{extraContent.default}"
                       </p>
                     )}
@@ -112,7 +112,7 @@ const About = () => {
                           (item: any, idx: number) => (
                             <div
                               key={idx}
-                              className="min-w-[220px] bg-white/5 border border-lime-300/30 p-5 rounded-[1.5rem] snap-start"
+                              className="min-w-[200px] md:min-w-[220px] bg-white/5 border border-lime-300/30 p-5 rounded-[1.5rem] snap-start"
                             >
                               <h4 className="text-lime-300 font-bold uppercase text-[11px] mb-1 leading-tight">
                                 {item.name}
@@ -134,7 +134,7 @@ const About = () => {
                         {skillsList.map((skill: string) => (
                           <span
                             key={skill}
-                            className="px-4 py-1.5 border border-lime-300/30 bg-lime-300/10 text-lime-300 text-[10px] font-bold rounded-full uppercase tracking-widest"
+                            className="px-3 py-1 md:px-4 md:py-1.5 border border-lime-300/30 bg-lime-300/10 text-lime-300 text-[9px] md:text-[10px] font-bold rounded-full uppercase tracking-widest"
                           >
                             {skill}
                           </span>
@@ -155,7 +155,7 @@ const About = () => {
               </div>
             </motion.div>
 
-            <div className="flex flex-wrap gap-4 items-center justify-center md:justify-center">
+            <div className="flex flex-wrap gap-3 md:gap-4 items-center justify-center">
               {navItems.map((item, i) => (
                 <motion.div
                   key={item.char}
@@ -167,14 +167,14 @@ const About = () => {
                   {item.type === "link" ? (
                     <Link
                       href={item.href!}
-                      className="w-14 h-14 md:w-20 md:h-20 transition-all hover:-translate-y-2 hover:scale-110 active:scale-95 cursor-pointer relative group flex items-center justify-center"
+                      className="w-12 h-12 md:w-20 md:h-20 transition-all hover:-translate-y-2 hover:scale-110 active:scale-95 cursor-pointer relative group flex items-center justify-center"
                     >
                       <img
                         src={item.img}
                         alt={item.char}
                         className="w-full h-full object-contain"
                       />
-                      <span className="absolute -bottom-10 left-1/2 -translate-x-1/2 px-3 py-1 bg-lime-300 text-black text-[10px] font-bold rounded-full opacity-0 group-hover:opacity-100 transition-all pointer-events-none uppercase z-50 whitespace-nowrap">
+                      <span className="absolute -bottom-10 left-1/2 -translate-x-1/2 px-3 py-1 bg-lime-300 text-black text-[10px] font-bold rounded-full opacity-0 md:group-hover:opacity-100 transition-all pointer-events-none uppercase z-50 whitespace-nowrap">
                         {item.label}
                       </span>
                     </Link>
@@ -182,28 +182,28 @@ const About = () => {
                     <a
                       href={item.href}
                       download
-                      className="w-14 h-14 md:w-20 md:h-20 transition-all hover:-translate-y-2 hover:scale-110 active:scale-95 cursor-pointer relative group flex items-center justify-center"
+                      className="w-12 h-12 md:w-20 md:h-20 transition-all hover:-translate-y-2 hover:scale-110 active:scale-95 cursor-pointer relative group flex items-center justify-center"
                     >
                       <img
                         src={item.img}
                         alt={item.char}
                         className="w-full h-full object-contain"
                       />
-                      <span className="absolute -bottom-10 left-1/2 -translate-x-1/2 px-3 py-1 bg-lime-300 text-black text-[10px] font-bold rounded-full opacity-0 group-hover:opacity-100 transition-all pointer-events-none uppercase z-50 flex items-center gap-1 whitespace-nowrap">
+                      <span className="absolute -bottom-10 left-1/2 -translate-x-1/2 px-3 py-1 bg-lime-300 text-black text-[10px] font-bold rounded-full opacity-0 md:group-hover:opacity-100 transition-all pointer-events-none uppercase z-50 flex items-center gap-1 whitespace-nowrap">
                         <Download size={10} /> {item.label}
                       </span>
                     </a>
                   ) : (
                     <button
                       onClick={() => setActiveTab(item.tab!)}
-                      className="w-14 h-14 md:w-20 md:h-20 transition-all hover:-translate-y-2 hover:scale-110 active:scale-95 cursor-pointer relative group flex items-center justify-center"
+                      className="w-12 h-12 md:w-20 md:h-20 transition-all hover:-translate-y-2 hover:scale-110 active:scale-95 cursor-pointer relative group flex items-center justify-center"
                     >
                       <img
                         src={item.img}
                         alt={item.char}
                         className="w-full h-full object-contain"
                       />
-                      <span className="absolute -bottom-10 left-1/2 -translate-x-1/2 px-3 py-1 bg-lime-300 text-black text-[10px] font-bold rounded-full opacity-0 group-hover:opacity-100 transition-all pointer-events-none uppercase z-50 whitespace-nowrap">
+                      <span className="absolute -bottom-10 left-1/2 -translate-x-1/2 px-3 py-1 bg-lime-300 text-black text-[10px] font-bold rounded-full opacity-0 md:group-hover:opacity-100 transition-all pointer-events-none uppercase z-50 whitespace-nowrap">
                         {item.label}
                       </span>
                     </button>
