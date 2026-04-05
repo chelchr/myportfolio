@@ -4,7 +4,7 @@ import React from "react";
 
 export default function ProjectCard({ data }: { data: any }) {
   return (
-    <div className="group relative border-2 border-lime-300/30 rounded-[2.5rem] overflow-hidden p-6 transition-all hover:border-lime-300 flex flex-col text-left h-full">
+    <div className="group relative bg-zinc-900/50 border-2 border-lime-300/15 rounded-[2.5rem] overflow-hidden p-6 transition-all hover:border-lime-300 flex flex-col text-left h-full">
       <div className="relative rounded-2xl overflow-hidden mb-4 border border-zinc-800 aspect-video shrink-0">
         <img
           src={data.image || ""}
