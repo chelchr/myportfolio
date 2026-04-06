@@ -120,7 +120,7 @@ export default function GameTerminal() {
   return (
     <div
       ref={scrollRef}
-      className="h-72 overflow-y-auto text-white/70 scrollbar-hide font-mono text-sm"
+      className="h-72 overflow-y-auto text-black scrollbar-hide font-mono text-sm"
     >
       {logs.map((log, i) => (
         <div key={i} className="whitespace-pre-wrap mb-1">
@@ -128,12 +128,12 @@ export default function GameTerminal() {
         </div>
       ))}
       <form onSubmit={handleInput} className="flex mt-2">
-        <span className="mr-2 text-lime-300">➜</span>
+        <span className="mr-2 text-fuchsia-500">➜</span>
         <input
           type="text"
           value={input}
           onChange={(e) => setInput(e.target.value)}
-          className="bg-transparent outline-none flex-1 text-lime-300 border-none focus:ring-0 p-0"
+          className="bg-transparent outline-none flex-1 text-fuchsia-500 border-none focus:ring-0 p-0"
           autoFocus
         />
       </form>

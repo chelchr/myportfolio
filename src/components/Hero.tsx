@@ -78,7 +78,7 @@ export default function Hero() {
         animate="visible"
       >
         <motion.h1
-          className="mt-10 text-6xl md:text-8xl font-black tracking-tighter text-white text-center"
+          className="mt-10 text-5xl md:text-7xl font-black tracking-tighter text-white text-center"
           variants={itemVariants}
         >
           Hi,{" "}

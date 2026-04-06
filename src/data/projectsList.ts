@@ -18,7 +18,7 @@ export const projectsList = [
     live: "https://omahfe-oprec.vercel.app/",
   },
   {
-    title: "OmahTI Project New Arrival Page",
+    title: "OmahTI Client New Arrival Page",
     year: "2026",
     desc: "Developed and collaborated on a responsive UI page and components for the web portal (Publish soon).",
     tech: ["React", "Next.js", "TypeScript", "GitHub"],
