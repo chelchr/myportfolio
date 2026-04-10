@@ -8,22 +8,22 @@ export default function Footer() {
     {
       name: "LinkedIn",
       href: "https://www.linkedin.com/in/chelsea-christofera-antonioli-purnomo-189484276/",
-      icon: "linkedin.svg",
+      icon: "/linkedin.webp",
     },
     {
       name: "Mail",
       href: "mailto:chelseachristoferaantonio@mail.ugm.ac.id",
-      icon: "mail.svg",
+      icon: "/mail.webp",
     },
     {
       name: "GitHub",
       href: "https://github.com/chelchr",
-      icon: "github.svg",
+      icon: "/github.webp",
     },
     {
       name: "Instagram",
       href: "https://instagram.com/chelllseaaach",
-      icon: "instagram.svg",
+      icon: "/instagram.webp",
     },
   ];
 

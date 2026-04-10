@@ -20,23 +20,23 @@ const About = () => {
       label: "Organizations",
       type: "btn",
       tab: "orgs",
-      img: "/c.svg",
+      img: "/c.webp",
     },
-    { char: "u", label: "Work", type: "btn", tab: "work", img: "/u.svg" },
+    { char: "u", label: "Work", type: "btn", tab: "work", img: "/u.webp" },
     {
       char: "l",
       label: "Achievements",
       type: "link",
       href: "/achievements",
-      img: "/l.svg",
+      img: "/l.webp",
     },
-    { char: "s", label: "Skills", type: "btn", tab: "skills", img: "/s.svg" },
+    { char: "s", label: "Skills", type: "btn", tab: "skills", img: "/s.webp" },
     {
       char: "i",
       label: "Download CV",
       type: "download",
       href: "/CV_Chelsea.pdf",
-      img: "/i.svg",
+      img: "/i.webp",
     },
   ];
 
@@ -77,7 +77,7 @@ const About = () => {
               }}
             >
               <img
-                src="/fotoculsi.png"
+                src="/fotoculsi.webp"
                 alt="Chelsea"
                 className="w-full h-full object-contain hover:scale-105 transition-all duration-500"
               />

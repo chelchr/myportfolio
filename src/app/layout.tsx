@@ -5,6 +5,7 @@ import Navbar from "@/components/Navbar";
 import MouseGlow from "@/ui/MouseGlow";
 
 const geistSans = Geist({
+  display: "swap",
   variable: "--font-geist-sans",
   subsets: ["latin"],
 });

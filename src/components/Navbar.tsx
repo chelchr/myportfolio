@@ -17,7 +17,7 @@ export default function Navbar() {
           className="flex items-center transition-all hover:scale-110"
         >
           <Image
-            src="/Initial.svg"
+            src="/Initial.webp"
             alt="Logo"
             width={100}
             height={100}

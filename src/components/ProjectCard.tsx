@@ -43,7 +43,7 @@ export default function ProjectCard({ data }: { data: any }) {
           className="flex items-center gap-2 text-[11px] font-bold text-white/90 hover:text-fuchsia-300"
         >
           <img
-            src="/github.svg"
+            src="/github.webp"
             alt="GitHub"
             className="w-4 h-4 brightness-0 invert"
           />
@@ -56,7 +56,7 @@ export default function ProjectCard({ data }: { data: any }) {
           className="flex items-center gap-2 text-[11px] font-bold text-white/90 hover:text-fuchsia-300"
         >
           <img
-            src="/openin.svg"
+            src="/openin.webp"
             alt="Live"
             className="w-4 h-4 brightness-0 invert"
           />
